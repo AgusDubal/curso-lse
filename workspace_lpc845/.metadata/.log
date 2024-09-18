@@ -14,3 +14,24 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2024-09-18 09:08:01.956
+!MESSAGE The device 'LPC845' (version='1.0.0') from SDK 'SDK_2.x_LPC845BREAKOUT' (version='2.16.000', build='epluginsite808 2024-07-15') will be installed.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2024-09-18 09:08:04.739
+!MESSAGE The device 'LPC845' (version='1.0.0') from SDK 'SDK_2.x_LPC845BREAKOUT' (version='2.16.000', build='epluginsite808 2024-07-15') will be installed.
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-18 09:21:38.883
+!MESSAGE Indexed '01_blinky' (21 sources, 27 headers) in 3,33 sec: 2.849 declarations; 5.771 references; 25 unresolved inclusions; 51 syntax errors; 1.553 unresolved names (15 %)
+
+!ENTRY com.crt.log 1 0 2024-09-18 09:37:36.282
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-09-18 09:37:36.327
+!MESSAGE RedlinkServer telnet session connected on port 3025->58861 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-09-18 09:37:47.094
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=58864, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/estudiante/Downloads/Github/curso-lse/workspace_lpc845/01_blinky/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/estudiante/Downloads/Github/curso-lse/workspace_lpc845/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-09-18 09:37:49.785
+!MESSAGE Telnet session connected on port 3330->58877 @ 127.0.0.1
