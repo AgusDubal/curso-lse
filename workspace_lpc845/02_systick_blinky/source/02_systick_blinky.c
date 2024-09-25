@@ -2,6 +2,7 @@
 
 // Pin para el LED azul
 #define LED_BLUE	1
+#define LED_D1 29
 
 /**
  * @brief Programa principal
@@ -16,8 +17,10 @@ int main(void) {
 
     // Habilito el puerto 1
     GPIO_PortInit(GPIO, 1);
+	GPIO_PortInit(GPIO, 0);
     // Configuro LED como salida
     GPIO_PinInit(GPIO, 1, LED_BLUE, &out_config);
+	GPIO_PinInit(GPIO, 0, LED_D1, &out_config);
 
     // Configuro SysTick para 1 ms
     SysTick_Config(SystemCoreClock / 1000);
@@ -36,10 +39,16 @@ void SysTick_Handler(void) {
 	// Incremento contador
 	i++;
 	// Verifico si el SysTick se disparo 500 veces (medio segundo)
-	if(i == 500) {
-		// Reinicio el contador
-		i = 0;
+	if( i % 500 == 0 ) {
+
 		// Conmuto el LED
 		GPIO_PinWrite(GPIO, 1, LED_BLUE, !GPIO_PinRead(GPIO, 1, LED_BLUE));
+
 	}
+	if (i == 1500)
+	{
+		i = 0;
+		GPIO_PinWrite(GPIO, 0, LED_D1, !GPIO_PinRead(GPIO, 0, LED_D1));
+	}
+	
 }

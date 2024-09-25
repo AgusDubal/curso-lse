@@ -6142,3 +6142,27 @@ java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-09-25 09:31:26.254
 !MESSAGE Indexed '02_sine_wave_generator' (22 sources, 28 headers) in 2,52 sec: 2.904 declarations; 5.919 references; 25 unresolved inclusions; 51 syntax errors; 1.575 unresolved names (15 %)
+
+!ENTRY com.crt.log 1 0 2024-09-25 10:36:23.955
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-09-25 10:36:25.041
+!MESSAGE RedlinkServer telnet session connected on port 3025->63752 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-09-25 10:36:30.345
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=63753, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/estudiante/Downloads/Github/curso-lse/workspace_lpc845/02_systick_blinky/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/estudiante/Downloads/Github/curso-lse/workspace_lpc845/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-09-25 10:36:32.845
+!MESSAGE Telnet session connected on port 3331->63765 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-09-25 10:37:43.610
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-09-25 10:37:44.634
+!MESSAGE RedlinkServer telnet session connected on port 3025->63779 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-09-25 10:37:45.230
+!MESSAGE Starting GDB server [ C:/nxp/LinkServer_1.6.133/binaries/crt_emu_cm_redlink, --server, :10989, -msg-port=63780, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/estudiante/Downloads/Github/curso-lse/workspace_lpc845/02_systick_blinky/Debug, --flash-dir, C:/nxp/LinkServer_1.6.133/binaries/Flash, --flash-dir, C:/Users/estudiante/Downloads/Github/curso-lse/workspace_lpc845/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3331 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-09-25 10:37:47.674
+!MESSAGE Telnet session connected on port 3331->63792 @ 127.0.0.1
