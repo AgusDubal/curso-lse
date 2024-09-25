@@ -23,7 +23,7 @@
 #define TransAno1 8
 #define TransAno2 9
 
-int pines [6] = {11, 10, 6, 14, 0};
+int pines [6] = {11, 10, 6, 14, 0, 13};
 
 
 
@@ -44,11 +44,13 @@ int main(void) {
     GPIO_PinInit(GPIO, 0, USER_BUTTON, &config_button);
     GPIO_PinInit(GPIO, 0, TransAno1, &config_segments);
     GPIO_PinInit(GPIO, 0, TransAno2, &config_segments);
-    for(int i= 0 ; i<=6; i++){
+    GPIO_PinInit(GPIO, 0, pines[0], &config_segments);
+    GPIO_PinInit(GPIO, 0, pines[1], &config_segments);
+    GPIO_PinInit(GPIO, 0, pines[2], &config_segments);
+    GPIO_PinInit(GPIO, 0, pines[3], &config_segments);
+    GPIO_PinInit(GPIO, 0, pines[4], &config_segments);
+    GPIO_PinInit(GPIO, 0, pines[5], &config_segments);
 
-        GPIO_PinInit(GPIO, 0, pines[i], &config_segments);
-
-    }
     
 
     while (1)
