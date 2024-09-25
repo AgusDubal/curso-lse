@@ -1,48 +1,45 @@
-/*
- * Copyright 2016-2024 NXP
- * All rights reserved.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
+#include "board.h"
+
+// Pin para el LED azul
+#define LED_BLUE	1
 
 /**
- * @file    02_systick_blinky.c
- * @brief   Application entry point.
- */
-#include <stdio.h>
-#include "board.h"
-#include "peripherals.h"
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "fsl_debug_console.h"
-/* TODO: insert other include files here. */
-
-/* TODO: insert other definitions and declarations here. */
-
-/*
- * @brief   Application entry point.
+ * @brief Programa principal
  */
 int main(void) {
 
-    /* Init board hardware. */
-    BOARD_InitBootPins();
-    BOARD_InitBootClocks();
-    BOARD_InitBootPeripherals();
-#ifndef BOARD_INIT_DEBUG_CONSOLE_PERIPHERAL
-    /* Init FSL debug console. */
-    BOARD_InitDebugConsole();
-#endif
+	// Inicializacion
+	BOARD_BootClockFRO24M();
 
-    PRINTF("Hello World\r\n");
+    // Estructura de configuracion de salida
+    gpio_pin_config_t out_config = { kGPIO_DigitalOutput, 1 };
 
-    /* Force the counter to be placed into memory. */
-    volatile static int i = 0 ;
-    /* Enter an infinite loop, just incrementing a counter. */
-    while(1) {
-        i++ ;
-        /* 'Dummy' NOP to allow source level single stepping of
-            tight while() loop */
-        __asm volatile ("nop");
-    }
+    // Habilito el puerto 1
+    GPIO_PortInit(GPIO, 1);
+    // Configuro LED como salida
+    GPIO_PinInit(GPIO, 1, LED_BLUE, &out_config);
+
+    // Configuro SysTick para 1 ms
+    SysTick_Config(SystemCoreClock / 1000);
+
+    while(1);
     return 0 ;
+}
+
+/**
+ * @brief Handler para interrupcion de SysTick
+ */
+void SysTick_Handler(void) {
+	// Variable para contar interrupciones
+	static uint16_t i = 0;
+
+	// Incremento contador
+	i++;
+	// Verifico si el SysTick se disparo 500 veces (medio segundo)
+	if(i == 500) {
+		// Reinicio el contador
+		i = 0;
+		// Conmuto el LED
+		GPIO_PinWrite(GPIO, 1, LED_BLUE, !GPIO_PinRead(GPIO, 1, LED_BLUE));
+	}
 }
