@@ -1,0 +1,12 @@
+"Task Aware Debugger for GDB" version 11.7.0 (202212092054)
+(c) 2016-2022 NXP Semiconductors, Inc.
+==================================
+10:41:19.54 INFO: [ZephyrRTOS] .config file could not be read [/media/dubi/Dubi2/home/Github/curso-lse/workspace_lpc845/03_light_control/Debug/.config (No existe el archivo o el directorio)]
+10:41:19.55 INFO: [TadModel] DSF session ID 0 has started.
+10:41:28.275 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+10:41:28.288 INFO: [TadState] TAD state changed: DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+10:41:29.313 INFO: [TadState] TAD state changed: DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+10:41:29.443 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+10:42:55.349 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+10:43:22.924 INFO: [TadState] TAD state changed: DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+10:43:25.236 INFO: [TadModel] DSF session ID 0 has ended.
