@@ -1,0 +1,6 @@
+"Task Aware Debugger for GDB" version 24.9.0 (202407110857)
+Copyright 2016-2023 NXP
+==================================
+10:59:10.678 INFO: [ZephyrRTOS] .config file could not be read [/media/dubi/Dubi2/home/Github/curso-lse/workspace_lpc845/03_light_control/Debug/.config (No existe el archivo o el directorio)]
+10:59:10.679 INFO: [TadModel] DSF session ID 0 has started.
+10:59:12.647 INFO: [TadModel] DSF session ID 0 has ended.
